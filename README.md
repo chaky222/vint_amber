@@ -1,6 +1,6 @@
 # vint_amber
 
-Frontent alterantive for vint.com.ua
+Frontend alternative for vint.com.ua
 
 ## Installation
 
