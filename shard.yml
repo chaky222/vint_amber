@@ -1,0 +1,51 @@
+name: vint_amber
+version: 0.1.0
+
+authors:
+  - Amber <amberframework.org>
+
+crystal: 0.23.1
+
+license: UNLICENSED
+
+targets:
+  vint_amber:
+    main: src/vint_amber.cr
+
+  amber:
+    main: lib/amber/src/amber/cli.cr
+
+dependencies:
+  amber:
+    github: amberframework/amber
+    version: 0.3.0
+
+  granite_orm:
+    github: chaky222/granite-orm
+    branch: master
+
+  quartz_mailer:
+    github: amberframework/quartz-mailer
+
+  jasper_helpers:
+    github: amberframework/jasper-helpers
+
+  db:
+    github: crystal-lang/crystal-db
+    version: ~> 0.4.2
+
+  mysql:
+    github: crystal-lang/crystal-mysql
+    version: ~> 0.3.2
+
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
+    version: ~> 0.8.2
+
+  pg:
+    github: will/crystal-pg
+    version: ~> 0.13.3
+
+development_dependencies:
+  amber_spec:
+    github: amberframework/amber-spec
