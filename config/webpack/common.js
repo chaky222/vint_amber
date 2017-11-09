@@ -5,7 +5,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 let config = {
   entry: {
     'main.bundle.js': './src/assets/javascripts/main.js',
-    'main.bundle.css': './src/assets/stylesheets/main.scss'
+    'main.bundle.css': './src/assets/stylesheets/main.scss',
+    'main2.bundle.css': './src/assets/stylesheets/main2.scss'
   },
   output: {
     filename: '[name]',
@@ -61,6 +62,7 @@ let config = {
   },
   plugins: [
     new ExtractTextPlugin('main.bundle.css'),
+    new ExtractTextPlugin('main2.bundle.css'),
   ]
 };
 

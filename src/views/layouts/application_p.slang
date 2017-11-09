@@ -1,13 +1,9 @@
 doctype html
-html
+html[xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"]
   head[lang="ru"]
-    meta[http-equiv="Content-Type" content="text/html; charset=utf-8"]
+    meta[http-equiv="Content-Type" content="text/html; charset=windows-1251"]
     meta[http-equiv="X-UA-Compatible" content="IE=edge"]
     meta[name="viewport" content="width=device-width, initial-scale=1"]
-    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    link rel="stylesheet" href="/dist/main.bundle.css"
-    link rel="stylesheet" href="/dist/main2.bundle.css"
-
     link[rel="icon" href="http://chaky.patisson-toys.com.ua/img/n/favicon.png" sizes="16x16" type="image/png"]
     meta[property="og:site_name" content="chaky.patisson-toys.com.ua"]
     meta[name="description" content="chaky.patisson-toys.com.ua - Интернет-магазин игрушек и детских товаров. &#9742; (097) 254-83-34. Бесплатное консультирование покупателей."]
@@ -1109,11 +1105,3 @@ html
             span.lb-number
           .lb-closeContainer
             a.lb-close
-
-    script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
-    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    script src="/dist/main.bundle.js"
-    div.col-xs-12.well.stats style="text-align:center;"
-      = "Made by "
-      a href="https://github.com/chaky222" chaky
-      = "Complate in #{Amber::Pipe::Logger.elapsed_text(Time.now - context.time_start)} + 0.05ms - 0.1ms"
