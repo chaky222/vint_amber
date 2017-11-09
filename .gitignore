@@ -3,6 +3,8 @@
 /.deps/
 /.crystal/
 /doc/
+/node_modules/
+/public/dist/*
 /config/*.yml
 /config/deploy/*.yml
 /config/environments/*.yml
