@@ -2,6 +2,11 @@ $font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $background-color: #f4994b;
 $nav-item-color: #ffe4cd;
 
+@import url(bootstrap.min.css);
+@import url(jquery.bxslider.min.css);
+
+@import url(fonts.css);
+
 /*
  * Globals 
  */

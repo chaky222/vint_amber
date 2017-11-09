@@ -1,0 +1,23 @@
+/*@font-face{font-family:'BenderBold';src:url('/fonts/bender_boldwebfont.woff') format('woff'),url('/fonts/bender_boldwebfont.ttf') format('truetype'),url('/fonts/bender_boldwebfont.svg#BenderBold') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'BenderBlack';src: url('/fonts/bender_blackwebfont.woff') format('woff'),url('/fonts/bender_blackwebfont.ttf') format('truetype'),url('/fonts/bender_blackwebfont.svg#BenderBlack') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'Bender';src:url('/fonts/benderwebfont.woff') format('woff'),url('/fonts/benderwebfont.ttf') format('truetype'),url('/fonts/benderwebfont.svg#Bender') format('svg');font-weight:normal;font-style:normal}*/
+@font-face {font-family: 'Bender-Light';src: url('/fonts/2A97F6_0_0.eot');src: url('/fonts/2A97F6_0_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2A97F6_0_0.woff') format('woff'),url('/fonts/2A97F6_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-Italic';src: url('/fonts/2A97F6_1_0.eot');src: url('/fonts/2A97F6_1_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2A97F6_1_0.woff') format('woff'),url('/fonts/2A97F6_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-LightItalic';src: url('/fonts/2A97F6_2_0.eot');src: url('/fonts/2A97F6_2_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2A97F6_2_0.woff') format('woff'),url('/fonts/2A97F6_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-Bold';src: url('/fonts/2A97F6_3_0.eot');src: url('/fonts/2A97F6_3_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2A97F6_3_0.woff') format('woff'),url('/fonts/2A97F6_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender';src: url('/fonts/2A97F6_4_0.eot');src: url('/fonts/2A97F6_4_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2A97F6_4_0.woff') format('woff'),url('/fonts/2A97F6_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-Black';src: url('/fonts/2A97F6_5_0.eot');src: url('/fonts/2A97F6_5_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2A97F6_5_0.woff') format('woff'),url('/fonts/2A97F6_5_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-BlackItalic';src: url('/fonts/2A97F6_6_0.eot');src: url('/fonts/2A97F6_6_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2A97F6_6_0.woff') format('woff'),url('/fonts/2A97F6_6_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-BoldItalic';src: url('/fonts/2A97F6_7_0.eot');src: url('/fonts/2A97F6_7_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2A97F6_7_0.woff') format('woff'),url('/fonts/2A97F6_7_0.ttf') format('truetype');}

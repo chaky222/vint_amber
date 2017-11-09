@@ -4,11 +4,10 @@ html
     meta[http-equiv="Content-Type" content="text/html; charset=utf-8"]
     meta[http-equiv="X-UA-Compatible" content="IE=edge"]
     meta[name="viewport" content="width=device-width, initial-scale=1"]
-    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     link rel="stylesheet" href="/dist/main.bundle.css"
     link rel="stylesheet" href="/dist/main2.bundle.css"
 
-    link[rel="icon" href="http://chaky.patisson-toys.com.ua/img/n/favicon.png" sizes="16x16" type="image/png"]
+    link[rel="icon" href="/dist/images/n/favicon.png" sizes="16x16" type="image/png"]
     meta[property="og:site_name" content="chaky.patisson-toys.com.ua"]
     meta[name="description" content="chaky.patisson-toys.com.ua - Интернет-магазин игрушек и детских товаров. &#9742; (097) 254-83-34. Бесплатное консультирование покупателей."]
     script[src="./pmain._files/jquery-1.11.3.min.js.Без названия"]
@@ -29,19 +28,19 @@ html
         .navbar_header.guest
           .right_nav_small_panel
             div
-              a.header_collapse_btn.visible_guest[href="http://chaky.patisson-toys.com.ua/#" onclick="openLoginForm();return false;"]
+              a.header_collapse_btn.visible_guest[href="/#" onclick="openLoginForm();return false;"]
                 span.glyphicon.glyphicon-user[aria-hidden="true"]
-              a.header_collapse_btn.visible_authorized[href="http://chaky.patisson-toys.com.ua/#" onclick="return logout();"]
+              a.header_collapse_btn.visible_authorized[href="/#" onclick="return logout();"]
                 span.glyphicon.glyphicon-log-out[aria-hidden="true"]
-              a.header_collapse_btn.visible_authorized[href="http://chaky.patisson-toys.com.ua/account"]
+              a.header_collapse_btn.visible_authorized[href="/account"]
                 span.glyphicon.glyphicon-cog[aria-hidden="true"]
-              a.header_collapse_btn.visible_authorized[href="http://chaky.patisson-toys.com.ua/client_orders"]
+              a.header_collapse_btn.visible_authorized[href="/client_orders"]
                 span.glyphicon.glyphicon-briefcase[aria-hidden="true"]
               label.header_collapse_btn.main_btn[for="top_menu_switcher"]
                 span.sr-only
                   | Каталог игрушек
                 span.glyphicon.glyphicon-align-justify[aria-hidden="true"]
-              a.header_collapse_btn.main_btn[href="http://chaky.patisson-toys.com.ua/basket"]
+              a.header_collapse_btn.main_btn[href="/basket"]
                 span.glyphicon.glyphicon-shopping-cart[aria-hidden="true"]
             .container-fluid[style="padding-left: 0"]
               .clearfix
@@ -54,55 +53,55 @@ html
                   |  097 - xxx - xx - xx 
                 div[style="float: right"]
                   |  Сб - Вс 
-          a.navbar-brand[href="http://chaky.patisson-toys.com.ua/"]
+          a.navbar-brand[href="/"]
             img.logo[src="./pmain._files/logo.png" alt=""]
         input#top_menu_switcher[type="checkbox" style="display:none;"]
         .top-menu.guest
           .item
-            a[href="http://chaky.patisson-toys.com.ua/about"]
+            a[href="/about"]
               | Кто мы
           .item
-            a[href="http://chaky.patisson-toys.com.ua/articles"]
+            a[href="/articles"]
               | Игрушечные Новости
           .item
-            a[hre2f="/director_blog" href="http://chaky.patisson-toys.com.ua/expert_reviews"]
+            a[hre2f="/director_blog" href="/expert_reviews"]
               | Обзоры экспертов
           .item
-            a[href="http://chaky.patisson-toys.com.ua/action"]
+            a[href="/action"]
               | Акции
           .item
-            a[href="http://chaky.patisson-toys.com.ua/reference"]
+            a[href="/reference"]
               | Отзывы
           .item
-            a[href="http://chaky.patisson-toys.com.ua/contacts"]
+            a[href="/contacts"]
               | Контакты
           .item
-            a[href="http://chaky.patisson-toys.com.ua/delivery"]
+            a[href="/delivery"]
               | Доставка и оплата
           .item.right.visible_authorized
-            a#logout_link[href="http://chaky.patisson-toys.com.ua/#" rel="nofollow"]
+            a#logout_link[href="/#" rel="nofollow"]
               | Выход
           .item.right.visible_authorized
-            a[href="http://chaky.patisson-toys.com.ua/account" rel="nofollow"]
+            a[href="/account" rel="nofollow"]
               | Настройки
           .item.right.visible_authorized
-            a[href="http://chaky.patisson-toys.com.ua/client_orders" rel="nofollow"]
+            a[href="/client_orders" rel="nofollow"]
               | Мои заказы
           .item.icon.right.visible_guest
-            a#login_link[href="http://chaky.patisson-toys.com.ua/#" rel="nofollow"]
-            .icon.user[style="display:inline; "]
-            span
-              | Вход для пользователей
+            a#login_link[href="/#" rel="nofollow"]
+              .icon.user[style="display:inline; "] == "&nbsp;" 
+              span
+                | Вход для пользователей
         .info
           .col.logo
-            a[href="http://chaky.patisson-toys.com.ua/"]
+            a[href="/"]
               img.logo_image[src="./pmain._files/logo.png" alt="Интернет-магазин patisson-toys.com.ua" title="Интернет-магазин patisson-toys.com.ua"]
           .wrapper
             .col.call[style="opacity:1;"]
               .title
                 | Звоните и пишите нам 
                 .line.callback
-                  a[href="http://chaky.patisson-toys.com.ua/feedback" rel="nofollow" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Нажатие на кнопку&#39;, &#39;Перезвоните мне&#39;, document.location.pathname]);"]
+                  a[href="/feedback" rel="nofollow" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Нажатие на кнопку&#39;, &#39;Перезвоните мне&#39;, document.location.pathname]);"]
                     | Перезвоните мне
               .accordion
                 ul
@@ -110,7 +109,7 @@ html
                     input.accordion-select[type="radio" name="select" checked=""]
                     .accordion-title
                       span.icon-skype
-                        img[src="./pmain._files/2.png"]
+                        img[src="/dist/images/icons-2/2.png"]
                     .accordion-content
                       span#istat_0.patisson_phone
                         a[href="tel:+380972548334"]
@@ -122,7 +121,7 @@ html
                     input.accordion-select[type="radio" name="select"]
                     .accordion-title
                       span.icon-skype
-                        img[src="./pmain._files/3.png"]
+                        img[src="/dist/images/icons-2/3.png"]
                     .accordion-content
                       a[style="margin-left: -50px;font-weight:normal; font-size: 12px;" href="mailto:patisson.toys@gmail.com" rel="nofollow" title="Звоните и пишите нам нам на e-mail!"]
                         | patisson.toys@gmail.com
@@ -131,7 +130,7 @@ html
                     input.accordion-select[type="radio" name="select"]
                     .accordion-title
                       span.icon-skype
-                        img[src="./pmain._files/skype.png"]
+                        img[src="/dist/images/icons-2/skype.png"]
                     .accordion-content
                       a[href="callto:patisson-toys.com.ua" rel="nofollow" title="Позвоните нам прямо сейчас!"]
                         | patisson-toys.com.ua
@@ -140,7 +139,7 @@ html
                     input.accordion-select[type="radio" name="select"]
                     .accordion-title
                       span.icon-skype
-                        img[src="./pmain._files/inst.png"]
+                        img[src="/dist/images/icons-2/inst.png"]
                     .accordion-content
                       a[style="margin-left: -50px;font-weight:normal; font-size: 11px;" href="https://www.instagram.com/patisson_toys/" rel="nofollow" title="Позвоните нам, смотрите обзоры.!"]
                         | instagram.com/patisson_toys
@@ -149,7 +148,7 @@ html
                     input.accordion-select[type="radio" name="select"]
                     .accordion-title
                       span.icon-skype
-                        img[src="./pmain._files/skype_1801.png"]
+                        img[src="/dist/images/icons-2/skype_1801.png"]
                     .accordion-content
                       a[target="_blank" rel="nofollow" href="https://www.facebook.com/Patisson-toys-137455506596252/" title="Оставьте Ваш отзыв в нашей группе в facebook!"]
                         | fb.com/Patisson-toys
@@ -158,7 +157,7 @@ html
                     input.accordion-select[type="radio" name="select"]
                     .accordion-title
                       span.icon-skype
-                        img[src="./pmain._files/vk_group.png"]
+                        img[src="/dist/images/icons-2/vk_group.png"]
                     .accordion-content
                       a[target="_blank" style=" " rel="nofollow" href="https://vk.com/patisson.toys" title="Оставьте Ваш отзыв в Вконтакте о магазине patisson.toys!"]
                         | vk.com/patisson.toys
@@ -167,7 +166,7 @@ html
                     input.accordion-select[type="radio" name="select"]
                     .accordion-title
                       span.icon-skype
-                        img[src="./pmain._files/utube.png"]
+                        img[src="/dist/images/icons-2/utube.png"]
                     .accordion-content
                       a[target="_blank" style=" " rel="nofollow" href="https://www.youtube.com/channel/UCVGI5OC5KS17lfTbYQRsqIA" title="Заходите на канал youtube магазина patisson-toys!"]
                         | youtube channel
@@ -185,60 +184,60 @@ html
                   ul[style="width: 6215%; position: relative; transition-duration: 0s; transform: translate3d(-590px, 0px, 0px);"]
                     li.bx-clone[style="float: left; list-style: none; position: relative; width: 590px;" aria-hidden="true"]
                       div
-                        a[href="http://chaky.patisson-toys.com.ua/action/konstruktor_magformers_teper_v_ukraine__17"]
+                        a[href="/action/konstruktor_magformers_teper_v_ukraine__17"]
                           img.action_banner[style="height:115px;display:block;" src="./pmain._files/29.jpg"]
                     li[style="float: left; list-style: none; position: relative; width: 590px;" aria-hidden="false"]
                       div
-                        a[href="http://chaky.patisson-toys.com.ua/action/aktsija_skazochnyj_domik_dlja_printsessy__21"]
+                        a[href="/action/aktsija_skazochnyj_domik_dlja_printsessy__21"]
                           img.action_banner[style="height:115px;display:block;" src="./pmain._files/37.jpg"]
                     li[style="float: left; list-style: none; position: relative; width: 590px;" aria-hidden="true"]
                       div
-                        a[href="http://chaky.patisson-toys.com.ua/action/8_marta_tol_ko_dlja_18"]
+                        a[href="/action/8_marta_tol_ko_dlja_18"]
                           img.action_banner[style="height:115px;display:block;" src="./pmain._files/33.jpg"]
                     li[style="float: left; list-style: none; position: relative; width: 590px;" aria-hidden="true"]
                       div
-                        a[href="http://chaky.patisson-toys.com.ua/action/aktsija_kupi_2_skazki_i_20"]
+                        a[href="/action/aktsija_kupi_2_skazki_i_20"]
                           img.action_banner[style="height:115px;display:block;" src="./pmain._files/36.jpg"]
                     li[style="float: left; list-style: none; position: relative; width: 590px;" aria-hidden="true"]
                       div
-                        a[href="http://chaky.patisson-toys.com.ua/action/_25_super_anatomicheskij_komlekt_19"]
+                        a[href="/action/_25_super_anatomicheskij_komlekt_19"]
                           img.action_banner[style="height:115px;display:block;" src="./pmain._files/32.jpg"]
                     li[style="float: left; list-style: none; position: relative; width: 590px;" aria-hidden="true"]
                       div
-                        a[href="http://chaky.patisson-toys.com.ua/action/aktsija_besplatnaja_dostavka_na_samye_12"]
+                        a[href="/action/aktsija_besplatnaja_dostavka_na_samye_12"]
                           img.action_banner[style="height:115px;display:block;" src="./pmain._files/25.png"]
                     li[style="float: left; list-style: none; position: relative; width: 590px;" aria-hidden="true"]
                       div
-                        a[href="http://chaky.patisson-toys.com.ua/action/konstruktor_magformers_teper_v_ukraine__17"]
+                        a[href="/action/konstruktor_magformers_teper_v_ukraine__17"]
                           img.action_banner[style="height:115px;display:block;" src="./pmain._files/29.jpg"]
                     li.bx-clone[style="float: left; list-style: none; position: relative; width: 590px;" aria-hidden="true"]
                       div
-                        a[href="http://chaky.patisson-toys.com.ua/action/aktsija_skazochnyj_domik_dlja_printsessy__21"]
+                        a[href="/action/aktsija_skazochnyj_domik_dlja_printsessy__21"]
                           img.action_banner[style="height:115px;display:block;" src="./pmain._files/37.jpg"]
                 .bx-controls.bx-has-controls-direction.bx-has-pager
                   .bx-controls-direction
-                    a.bx-prev[href="http://chaky.patisson-toys.com.ua/"]
+                    a.bx-prev[href="/"]
                       | Prev
-                    a.bx-next[href="http://chaky.patisson-toys.com.ua/"]
+                    a.bx-next[href="/"]
                       | Next
                   .bx-pager.bx-default-pager
                     .bx-pager-item
-                      a.bx-pager-link.active[href="http://chaky.patisson-toys.com.ua/" data-slide-index="0"]
+                      a.bx-pager-link.active[href="/" data-slide-index="0"]
                         | 1
                     .bx-pager-item
-                      a.bx-pager-link[href="http://chaky.patisson-toys.com.ua/" data-slide-index="1"]
+                      a.bx-pager-link[href="/" data-slide-index="1"]
                         | 2
                     .bx-pager-item
-                      a.bx-pager-link[href="http://chaky.patisson-toys.com.ua/" data-slide-index="2"]
+                      a.bx-pager-link[href="/" data-slide-index="2"]
                         | 3
                     .bx-pager-item
-                      a.bx-pager-link[href="http://chaky.patisson-toys.com.ua/" data-slide-index="3"]
+                      a.bx-pager-link[href="/" data-slide-index="3"]
                         | 4
                     .bx-pager-item
-                      a.bx-pager-link[href="http://chaky.patisson-toys.com.ua/" data-slide-index="4"]
+                      a.bx-pager-link[href="/" data-slide-index="4"]
                         | 5
                     .bx-pager-item
-                      a.bx-pager-link[href="http://chaky.patisson-toys.com.ua/" data-slide-index="5"]
+                      a.bx-pager-link[href="/" data-slide-index="5"]
                         | 6
           .col.cart.right
             .content
@@ -258,7 +257,7 @@ html
         .search2
           .background_div
             .search
-              form#search_form[action="http://chaky.patisson-toys.com.ua/product"]
+              form#search_form[action="/product"]
                 input#search_input.search-input[type="text" name="search" placeholder="Поиск" value=""]
                 input.search-btn[type="submit" value=""]
                 input[type="hidden" name="ppp" value=""]
@@ -277,410 +276,410 @@ html
         .main-menu.clear
           #main-menu-item1.item.educational_toys
             .icon.educational_toys
-              a[href="http://chaky.patisson-toys.com.ua/product/educational_toys"]
+              a[href="/product/educational_toys"]
                 | Развивающие игрушки
                 span
                   |  ▾
             .tab
               .title
                 .icon.educational_toys
-                  a[href="http://chaky.patisson-toys.com.ua/product/educational_toys"]
+                  a[href="/product/educational_toys"]
                     | Развивающие игрушки
             .sub-menu
               #sub-menu-item1.wrapper.clear
                 .white-stripe
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/constructors"]
+                    a[href="/product/educational_toys/constructors"]
                       | Конструкторы
                     ul.lvl-2
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/constructors/Magnetic_kit"]
+                        a[href="/product/educational_toys/constructors/Magnetic_kit"]
                           | Магнитные конструкторы 
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/constructors/Wooden_kit"]
+                        a[href="/product/educational_toys/constructors/Wooden_kit"]
                           | Деревянные конструкторы 
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/constructors/LEGO"]
+                        a[href="/product/educational_toys/constructors/LEGO"]
                           | LEGO конструкторы
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/constructors/The_designers_of_cardboard"]
+                        a[href="/product/educational_toys/constructors/The_designers_of_cardboard"]
                           | Картонные конструкторы
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/constructors/Designers_of_iron"]
+                        a[href="/product/educational_toys/constructors/Designers_of_iron"]
                           | Конструкторы из металла
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/constructors/Designers_of_plastic"]
+                        a[href="/product/educational_toys/constructors/Designers_of_plastic"]
                           | Конструкторы из пластика
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/research_kits"]
+                    a[href="/product/educational_toys/research_kits"]
                       | Наука для детей
                     ul.lvl-2
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/research_kits/detskie-nauchnye-issledovaniia"]
+                        a[href="/product/educational_toys/research_kits/detskie-nauchnye-issledovaniia"]
                           | Наборы для опытов и исследований
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/research_kits/4D_puzzle"]
+                        a[href="/product/educational_toys/research_kits/4D_puzzle"]
                           | 4D - научные модели
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/research_kits/optica_kids"]
+                        a[href="/product/educational_toys/research_kits/optica_kids"]
                           | Оптика для детей
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/board_games"]
+                    a[href="/product/educational_toys/board_games"]
                       | Играем интересные игры
                     ul.lvl-2
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/board_games/board_games"]
+                        a[href="/product/educational_toys/board_games/board_games"]
                           | Настольные игры 
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/board_games/puzzles"]
+                        a[href="/product/educational_toys/board_games/puzzles"]
                           | Пазлы
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/board_games/magnetic_games"]
+                        a[href="/product/educational_toys/board_games/magnetic_games"]
                           | Магнитные игры
                       li
-                        a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/board_games/conundrum"]
+                        a[href="/product/educational_toys/board_games/conundrum"]
                           | Головоломки, балансиры
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/dir_3011405"]
+                    a[href="/product/educational_toys/dir_3011405"]
                       | Считай и сортируй
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/dir_3011419"]
+                    a[href="/product/educational_toys/dir_3011419"]
                       | Кегельбаны
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/mosaic"]
+                    a[href="/product/educational_toys/mosaic"]
                       | Мозаика
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/kids_optics"]
+                    a[href="/product/educational_toys/kids_optics"]
                       | Сюжетно-ролевые наборы
               .shadow
           #main-menu-item2.item.childrens_creativity
             .icon.childrens_creativity
-              a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity"]
+              a[href="/product/childrens_creativity"]
                 | Детское творчество
                 span
                   |  ▾
             .tab
               .title
                 .icon.childrens_creativity
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity"]
+                  a[href="/product/childrens_creativity"]
                     | Детское творчество
             .sub-menu.horizontal
               #sub-menu-item2.wrapper.clear
                 .white-stripe
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/dir_3011393"]
+                    a[href="/product/childrens_creativity/dir_3011393"]
                       | Кинетический песок
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/modeling"]
+                    a[href="/product/childrens_creativity/modeling"]
                       | Массы для лепки, пластилин
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/dir_3011391"]
+                    a[href="/product/childrens_creativity/dir_3011391"]
                       | Мелки
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/accessories"]
+                    a[href="/product/childrens_creativity/accessories"]
                       | Аксессуары, песочницы, формы
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/creativity_kits"]
+                    a[href="/product/childrens_creativity/creativity_kits"]
                       | Наборы для творчества
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/pencilling"]
+                    a[href="/product/childrens_creativity/pencilling"]
                       | Рисование
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/music"]
+                    a[href="/product/childrens_creativity/music"]
                       | Музыка
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/dir_3011392"]
+                    a[href="/product/childrens_creativity/dir_3011392"]
                       | Оригами, аппликации
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/stickers"]
+                    a[href="/product/childrens_creativity/stickers"]
                       | Наклейки, штампы
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/dir_3011406"]
+                    a[href="/product/childrens_creativity/dir_3011406"]
                       | Раскраски
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/jewelry"]
+                    a[href="/product/childrens_creativity/jewelry"]
                       | Детские украшения, рукоделие
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/office"]
+                    a[href="/product/childrens_creativity/office"]
                       | Канцелярия
               .shadow
           #main-menu-item3.item.toys_world
             .icon.toys_world
-              a[href="http://chaky.patisson-toys.com.ua/product/toys_world"]
+              a[href="/product/toys_world"]
                 | Для малышей
                 span
                   |  ▾
             .tab
               .title
                 .icon.toys_world
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world"]
+                  a[href="/product/toys_world"]
                     | Для малышей
             .sub-menu.horizontal
               #sub-menu-item3.wrapper.clear
                 .white-stripe
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/toys_world/pyramids_sorters"]
+                    a[href="/product/toys_world/pyramids_sorters"]
                       | Пирамиды, сортеры, кубики
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/toys_world/doska-zastezhki"]
+                    a[href="/product/toys_world/doska-zastezhki"]
                       | Доски - застежки
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/toys_world/table_games"]
+                    a[href="/product/toys_world/table_games"]
                       | Настольные игры, пазлы
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/toys_world/dir_3011417"]
+                    a[href="/product/toys_world/dir_3011417"]
                       | Первые конструкторы
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/toys_world/rattles_rodents"]
+                    a[href="/product/toys_world/rattles_rodents"]
                       | Погремушки и грызуны
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/toys_world/winders"]
+                    a[href="/product/toys_world/winders"]
                       | Каталочки
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/toys_world/bath_toys"]
+                    a[href="/product/toys_world/bath_toys"]
                       | Игрушки для ванной
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/toys_world/strollers_toys"]
+                    a[href="/product/toys_world/strollers_toys"]
                       | Игрушки для колясок, кроваток
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/toys_world/playmats"]
+                    a[href="/product/toys_world/playmats"]
                       | Развивающие коврики
               .shadow
           #main-menu-item4.item
             .icon
-              a[href="http://chaky.patisson-toys.com.ua/product/active_rest"]
+              a[href="/product/active_rest"]
                 | Активный отдых
                 span
                   |  ▾
             .tab
               .title
                 .icon
-                  a[href="http://chaky.patisson-toys.com.ua/product/active_rest"]
+                  a[href="/product/active_rest"]
                     | Активный отдых
             .sub-menu.horizontal
               #sub-menu-item4.wrapper.clear
                 .white-stripe
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011412"]
+                    a[href="/product/active_rest/dir_3011412"]
                       | Все для путешествий 
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011414"]
+                    a[href="/product/active_rest/dir_3011414"]
                       | Прогулочные коляски
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011407"]
+                    a[href="/product/active_rest/dir_3011407"]
                       | Рюкзаки и сумки
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/active_rest/in_the_yard"]
+                    a[href="/product/active_rest/in_the_yard"]
                       | Игры на улице
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011390"]
+                    a[href="/product/active_rest/dir_3011390"]
                       | Мыльные пузыри
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011416"]
+                    a[href="/product/active_rest/dir_3011416"]
                       | Полезные аксессуары для прогулок
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011420"]
+                    a[href="/product/active_rest/dir_3011420"]
                       | Одежда для прогулок
               .shadow
           #main-menu-item5.item.soft_toys
             .icon.soft_toys
-              a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra"]
+              a[href="/product/syuzhetno-rolevaya-igra"]
                 | Сюжетно-ролевые игры
                 span
                   |  ▾
             .tab
               .title
                 .icon.soft_toys
-                  a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra"]
+                  a[href="/product/syuzhetno-rolevaya-igra"]
                     | Сюжетно-ролевые игры
             .sub-menu.horizontal
               #sub-menu-item5.wrapper.clear
                 .white-stripe
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/detskiy-teatr"]
+                    a[href="/product/syuzhetno-rolevaya-igra/detskiy-teatr"]
                       | Кукольный театр 
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/soft_toys"]
+                    a[href="/product/syuzhetno-rolevaya-igra/soft_toys"]
                       | Мягкие игрушки
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/dolls"]
+                    a[href="/product/syuzhetno-rolevaya-igra/dolls"]
                       | Дочки-матери
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/igra-kuhnya"]
+                    a[href="/product/syuzhetno-rolevaya-igra/igra-kuhnya"]
                       | Кухня и игрушечная еда
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/detskie-igrovye-domiki"]
+                    a[href="/product/syuzhetno-rolevaya-igra/detskie-igrovye-domiki"]
                       | Детские игровые домики, мебель
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/heroes"]
+                    a[href="/product/syuzhetno-rolevaya-igra/heroes"]
                       | Игровые фигурки, герои
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/kostyumy_dlya_karnavala"]
+                    a[href="/product/syuzhetno-rolevaya-igra/kostyumy_dlya_karnavala"]
                       | Карнавальные костюмы
               .shadow
           #main-menu-item6.item.cars
             .icon.cars
-              a[href="http://chaky.patisson-toys.com.ua/product/cars"]
+              a[href="/product/cars"]
                 | Машинки и техника 
                 span
                   |  ▾
             .tab[style="top: 372px;"]
               .title
                 .icon.cars
-                  a[href="http://chaky.patisson-toys.com.ua/product/cars"]
+                  a[href="/product/cars"]
                     | Машинки и техника 
             .sub-menu.horizontal[style="left: 42.5469px; width: 1198px;"]
               #sub-menu-item6.wrapper.clear
                 .white-stripe
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/cars/cars"]
+                    a[href="/product/cars/cars"]
                       | Машинки, самолеты, вертолеты
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/cars/railways"]
+                    a[href="/product/cars/railways"]
                       | Железные дороги, поезда
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/cars/dir_3011421"]
+                    a[href="/product/cars/dir_3011421"]
                       | Беговелы, самокаты
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/cars/transformers"]
+                    a[href="/product/cars/transformers"]
                       | Роботы, трансформеры
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/cars/radio_toys"]
+                    a[href="/product/cars/radio_toys"]
                       | Радиоуправляемые игрушки
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/cars/dir_3011397"]
+                    a[href="/product/cars/dir_3011397"]
                       | Детское оружие
               .shadow
           #main-menu-item7.item.books
             .icon.books
-              a[href="http://chaky.patisson-toys.com.ua/product/books"]
+              a[href="/product/books"]
                 | Книжная полка
                 span
                   |  ▾
             .tab
               .title
                 .icon.books
-                  a[href="http://chaky.patisson-toys.com.ua/product/books"]
+                  a[href="/product/books"]
                     | Книжная полка
             .sub-menu.horizontal
               #sub-menu-item7.wrapper.clear
                 .white-stripe
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/books/encyclopedia"]
+                    a[href="/product/books/encyclopedia"]
                       | Детские энциклопедии
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/books/cognitive"]
+                    a[href="/product/books/cognitive"]
                       | Познавательная литература
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/books/dir_3011411"]
+                    a[href="/product/books/dir_3011411"]
                       | Книги-картинки, виммельбухи
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/books/dir_3011415"]
+                    a[href="/product/books/dir_3011415"]
                       | Азбуки, буквари, учебная литература
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/books/fiction"]
+                    a[href="/product/books/fiction"]
                       | Художественная литература
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/books/training_aids"]
+                    a[href="/product/books/training_aids"]
                       | Развивающие пособия и карточки
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/books/dir_3011408"]
+                    a[href="/product/books/dir_3011408"]
                       | Книги с наклейками
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/books/for_parents"]
+                    a[href="/product/books/for_parents"]
                       | Книги для родителей
               .shadow
           #main-menu-item8.item.childs_room
             .icon.childs_room
-              a[href="http://chaky.patisson-toys.com.ua/product/childs_room"]
+              a[href="/product/childs_room"]
                 | Детская комната
                 span
                   |  ▾
             .tab
               .title
                 .icon.childs_room
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room"]
+                  a[href="/product/childs_room"]
                     | Детская комната
             .sub-menu.horizontal
               #sub-menu-item8.wrapper.clear
                 .white-stripe
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childs_room/toys_storing"]
+                    a[href="/product/childs_room/toys_storing"]
                       | Хранение вещей, игрушек
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childs_room/tents"]
+                    a[href="/product/childs_room/tents"]
                       | Шатры, домики, качели
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childs_room/lamps"]
+                    a[href="/product/childs_room/lamps"]
                       | Ночники, светильники
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childs_room/dir_3011413"]
+                    a[href="/product/childs_room/dir_3011413"]
                       | Мебель в детскую
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childs_room/walls_stickers"]
+                    a[href="/product/childs_room/walls_stickers"]
                       | Стикеры для стен
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childs_room/stadiometers"]
+                    a[href="/product/childs_room/stadiometers"]
                       | Ростомеры
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childs_room/bedding"]
+                    a[href="/product/childs_room/bedding"]
                       | Постельные принадлежности
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childs_room/dir_3011402"]
+                    a[href="/product/childs_room/dir_3011402"]
                       | Hand-made для детской
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childs_room/dishes"]
+                    a[href="/product/childs_room/dishes"]
                       | Детская посуда
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/childs_room/decoration"]
+                    a[href="/product/childs_room/decoration"]
                       | Декор
               .shadow
           #main-menu-item9.item.for_mums
             .icon.for_mums
-              a[href="http://chaky.patisson-toys.com.ua/product/for_mums"]
+              a[href="/product/for_mums"]
                 | Для мам
                 span
                   |  ▾
             .tab
               .title
                 .icon.for_mums
-                  a[href="http://chaky.patisson-toys.com.ua/product/for_mums"]
+                  a[href="/product/for_mums"]
                     | Для мам
             .sub-menu.horizontal
               #sub-menu-item9.wrapper.clear
                 .white-stripe
                 ul.lvl-1
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/for_mums/wheelchairs_bags"]
+                    a[href="/product/for_mums/wheelchairs_bags"]
                       | Сумочки для колясок
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/for_mums/slings"]
+                    a[href="/product/for_mums/slings"]
                       | Переноски, слинги
                   li
-                    a[href="http://chaky.patisson-toys.com.ua/product/for_mums/cosmetics"]
+                    a[href="/product/for_mums/cosmetics"]
                       | Косметика для мам
               .shadow
           #main-menu-item10.item
             .icon
-              a[href="http://chaky.patisson-toys.com.ua/product/sale"]
+              a[href="/product/sale"]
                 | %SALE!
                 span
                   |  ▾
       #content
         .breadcrumbs[xmlns:v="http://rdf.data-vocabulary.org/#"]
           span[typeof="v:Breadcrumb"]
-            a[href="http://chaky.patisson-toys.com.ua/product" rel="v:url" property="v:title"]
+            a[href="/product" rel="v:url" property="v:title"]
               | Каталог
         .product-catalog
           h1
@@ -688,293 +687,293 @@ html
           .sections
             .row
               .item.col-lg-2.col-md-3.col-sm-4.col-xs-6
-                a[href="http://chaky.patisson-toys.com.ua/product/educational_toys"]
+                a[href="/product/educational_toys"]
 
                 .icon-bg
                   .icon-48.educational_toys
                 .title
-                  a[href="http://chaky.patisson-toys.com.ua/product/educational_toys"]
+                  a[href="/product/educational_toys"]
                     | Развивающие игрушки
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/constructors"]
+                  a[href="/product/educational_toys/constructors"]
                     | Конструкторы
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/research_kits"]
+                  a[href="/product/educational_toys/research_kits"]
                     | Наука для детей
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/dir_3011405"]
+                  a[href="/product/educational_toys/dir_3011405"]
                     | Считай и сортируй
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/dir_3011419"]
+                  a[href="/product/educational_toys/dir_3011419"]
                     | Кегельбаны
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/board_games"]
+                  a[href="/product/educational_toys/board_games"]
                     | Играем интересные игры
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/mosaic"]
+                  a[href="/product/educational_toys/mosaic"]
                     | Мозаика
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/educational_toys/kids_optics"]
+                  a[href="/product/educational_toys/kids_optics"]
                     | Сюжетно-ролевые наборы
               .item.col-lg-2.col-md-3.col-sm-4.col-xs-6
-                a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity"]
+                a[href="/product/childrens_creativity"]
 
                 .icon-bg
                   .icon-48.childrens_creativity
                 .title
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity"]
+                  a[href="/product/childrens_creativity"]
                     | Детское творчество
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/dir_3011393"]
+                  a[href="/product/childrens_creativity/dir_3011393"]
                     | Кинетический песок
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/modeling"]
+                  a[href="/product/childrens_creativity/modeling"]
                     | Массы для лепки, пластилин
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/dir_3011391"]
+                  a[href="/product/childrens_creativity/dir_3011391"]
                     | Мелки
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/accessories"]
+                  a[href="/product/childrens_creativity/accessories"]
                     | Аксессуары, песочницы, формы
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/creativity_kits"]
+                  a[href="/product/childrens_creativity/creativity_kits"]
                     | Наборы для творчества
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/pencilling"]
+                  a[href="/product/childrens_creativity/pencilling"]
                     | Рисование
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/music"]
+                  a[href="/product/childrens_creativity/music"]
                     | Музыка
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/dir_3011392"]
+                  a[href="/product/childrens_creativity/dir_3011392"]
                     | Оригами, аппликации
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/stickers"]
+                  a[href="/product/childrens_creativity/stickers"]
                     | Наклейки, штампы
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/dir_3011406"]
+                  a[href="/product/childrens_creativity/dir_3011406"]
                     | Раскраски
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/jewelry"]
+                  a[href="/product/childrens_creativity/jewelry"]
                     | Детские украшения, рукоделие
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/childrens_creativity/office"]
+                  a[href="/product/childrens_creativity/office"]
                     | Канцелярия
               .item.col-lg-2.col-md-3.col-sm-4.col-xs-6
-                a[href="http://chaky.patisson-toys.com.ua/product/toys_world"]
+                a[href="/product/toys_world"]
 
                 .icon-bg
                   .icon-48.toys_world
                 .title
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world"]
+                  a[href="/product/toys_world"]
                     | Для малышей
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world/pyramids_sorters"]
+                  a[href="/product/toys_world/pyramids_sorters"]
                     | Пирамиды, сортеры, кубики
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world/doska-zastezhki"]
+                  a[href="/product/toys_world/doska-zastezhki"]
                     | Доски - застежки
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world/table_games"]
+                  a[href="/product/toys_world/table_games"]
                     | Настольные игры, пазлы
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world/dir_3011417"]
+                  a[href="/product/toys_world/dir_3011417"]
                     | Первые конструкторы
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world/rattles_rodents"]
+                  a[href="/product/toys_world/rattles_rodents"]
                     | Погремушки и грызуны
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world/winders"]
+                  a[href="/product/toys_world/winders"]
                     | Каталочки
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world/bath_toys"]
+                  a[href="/product/toys_world/bath_toys"]
                     | Игрушки для ванной
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world/strollers_toys"]
+                  a[href="/product/toys_world/strollers_toys"]
                     | Игрушки для колясок, кроваток
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/toys_world/playmats"]
+                  a[href="/product/toys_world/playmats"]
                     | Развивающие коврики
               .item.col-lg-2.col-md-3.col-sm-4.col-xs-6
                 .a_image
                   .img
                     .sub-img
-                      a[href="http://chaky.patisson-toys.com.ua/product/active_rest"]
+                      a[href="/product/active_rest"]
                         img[src="./pmain._files/bg-product-catalog-section-icon.png" alt=""]
                 .title
-                  a[href="http://chaky.patisson-toys.com.ua/product/active_rest"]
+                  a[href="/product/active_rest"]
                     | Активный отдых
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011412"]
+                  a[href="/product/active_rest/dir_3011412"]
                     | Все для путешествий 
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011414"]
+                  a[href="/product/active_rest/dir_3011414"]
                     | Прогулочные коляски
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011407"]
+                  a[href="/product/active_rest/dir_3011407"]
                     | Рюкзаки и сумки
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/active_rest/in_the_yard"]
+                  a[href="/product/active_rest/in_the_yard"]
                     | Игры на улице
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011390"]
+                  a[href="/product/active_rest/dir_3011390"]
                     | Мыльные пузыри
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011416"]
+                  a[href="/product/active_rest/dir_3011416"]
                     | Полезные аксессуары для прогулок
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/active_rest/dir_3011420"]
+                  a[href="/product/active_rest/dir_3011420"]
                     | Одежда для прогулок
               .item.col-lg-2.col-md-3.col-sm-4.col-xs-6
-                a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra"]
+                a[href="/product/syuzhetno-rolevaya-igra"]
 
                 .icon-bg
                   .icon-48.soft_toys
                 .title
-                  a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra"]
+                  a[href="/product/syuzhetno-rolevaya-igra"]
                     | Сюжетно-ролевые игры
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/detskiy-teatr"]
+                  a[href="/product/syuzhetno-rolevaya-igra/detskiy-teatr"]
                     | Кукольный театр 
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/soft_toys"]
+                  a[href="/product/syuzhetno-rolevaya-igra/soft_toys"]
                     | Мягкие игрушки
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/dolls"]
+                  a[href="/product/syuzhetno-rolevaya-igra/dolls"]
                     | Дочки-матери
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/igra-kuhnya"]
+                  a[href="/product/syuzhetno-rolevaya-igra/igra-kuhnya"]
                     | Кухня и игрушечная еда
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/detskie-igrovye-domiki"]
+                  a[href="/product/syuzhetno-rolevaya-igra/detskie-igrovye-domiki"]
                     | Детские игровые домики, мебель
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/heroes"]
+                  a[href="/product/syuzhetno-rolevaya-igra/heroes"]
                     | Игровые фигурки, герои
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/syuzhetno-rolevaya-igra/kostyumy_dlya_karnavala"]
+                  a[href="/product/syuzhetno-rolevaya-igra/kostyumy_dlya_karnavala"]
                     | Карнавальные костюмы
               .item.col-lg-2.col-md-3.col-sm-4.col-xs-6
-                a[href="http://chaky.patisson-toys.com.ua/product/cars"]
+                a[href="/product/cars"]
 
                 .icon-bg
                   .icon-48.cars
                 .title
-                  a[href="http://chaky.patisson-toys.com.ua/product/cars"]
+                  a[href="/product/cars"]
                     | Машинки и техника 
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/cars/cars"]
+                  a[href="/product/cars/cars"]
                     | Машинки, самолеты, вертолеты
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/cars/railways"]
+                  a[href="/product/cars/railways"]
                     | Железные дороги, поезда
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/cars/dir_3011421"]
+                  a[href="/product/cars/dir_3011421"]
                     | Беговелы, самокаты
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/cars/transformers"]
+                  a[href="/product/cars/transformers"]
                     | Роботы, трансформеры
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/cars/radio_toys"]
+                  a[href="/product/cars/radio_toys"]
                     | Радиоуправляемые игрушки
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/cars/dir_3011397"]
+                  a[href="/product/cars/dir_3011397"]
                     | Детское оружие
               .item.col-lg-2.col-md-3.col-sm-4.col-xs-6
-                a[href="http://chaky.patisson-toys.com.ua/product/books"]
+                a[href="/product/books"]
 
                 .icon-bg
                   .icon-48.books
                 .title
-                  a[href="http://chaky.patisson-toys.com.ua/product/books"]
+                  a[href="/product/books"]
                     | Книжная полка
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/books/encyclopedia"]
+                  a[href="/product/books/encyclopedia"]
                     | Детские энциклопедии
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/books/cognitive"]
+                  a[href="/product/books/cognitive"]
                     | Познавательная литература
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/books/dir_3011411"]
+                  a[href="/product/books/dir_3011411"]
                     | Книги-картинки, виммельбухи
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/books/dir_3011415"]
+                  a[href="/product/books/dir_3011415"]
                     | Азбуки, буквари, учебная литература
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/books/fiction"]
+                  a[href="/product/books/fiction"]
                     | Художественная литература
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/books/training_aids"]
+                  a[href="/product/books/training_aids"]
                     | Развивающие пособия и карточки
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/books/dir_3011408"]
+                  a[href="/product/books/dir_3011408"]
                     | Книги с наклейками
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/books/for_parents"]
+                  a[href="/product/books/for_parents"]
                     | Книги для родителей
               .item.col-lg-2.col-md-3.col-sm-4.col-xs-6
-                a[href="http://chaky.patisson-toys.com.ua/product/childs_room"]
+                a[href="/product/childs_room"]
 
                 .icon-bg
                   .icon-48.childs_room
                 .title
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room"]
+                  a[href="/product/childs_room"]
                     | Детская комната
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room/toys_storing"]
+                  a[href="/product/childs_room/toys_storing"]
                     | Хранение вещей, игрушек
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room/tents"]
+                  a[href="/product/childs_room/tents"]
                     | Шатры, домики, качели
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room/lamps"]
+                  a[href="/product/childs_room/lamps"]
                     | Ночники, светильники
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room/dir_3011413"]
+                  a[href="/product/childs_room/dir_3011413"]
                     | Мебель в детскую
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room/walls_stickers"]
+                  a[href="/product/childs_room/walls_stickers"]
                     | Стикеры для стен
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room/stadiometers"]
+                  a[href="/product/childs_room/stadiometers"]
                     | Ростомеры
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room/bedding"]
+                  a[href="/product/childs_room/bedding"]
                     | Постельные принадлежности
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room/dir_3011402"]
+                  a[href="/product/childs_room/dir_3011402"]
                     | Hand-made для детской
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room/dishes"]
+                  a[href="/product/childs_room/dishes"]
                     | Детская посуда
                 li.hidden
-                  a[href="http://chaky.patisson-toys.com.ua/product/childs_room/decoration"]
+                  a[href="/product/childs_room/decoration"]
                     | Декор
               .item.col-lg-2.col-md-3.col-sm-4.col-xs-6
-                a[href="http://chaky.patisson-toys.com.ua/product/for_mums"]
+                a[href="/product/for_mums"]
 
                 .icon-bg
                   .icon-48.for_mums
                 .title
-                  a[href="http://chaky.patisson-toys.com.ua/product/for_mums"]
+                  a[href="/product/for_mums"]
                     | Для мам
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/for_mums/wheelchairs_bags"]
+                  a[href="/product/for_mums/wheelchairs_bags"]
                     | Сумочки для колясок
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/for_mums/slings"]
+                  a[href="/product/for_mums/slings"]
                     | Переноски, слинги
                 li
-                  a[href="http://chaky.patisson-toys.com.ua/product/for_mums/cosmetics"]
+                  a[href="/product/for_mums/cosmetics"]
                     | Косметика для мам
               .item.col-lg-2.col-md-3.col-sm-4.col-xs-6
                 .a_image
                   .img
                     .sub-img
-                      a[href="http://chaky.patisson-toys.com.ua/product/sale"]
+                      a[href="/product/sale"]
                         img[src="./pmain._files/bg-product-catalog-section-icon.png" alt=""]
                 .title
-                  a[href="http://chaky.patisson-toys.com.ua/product/sale"]
+                  a[href="/product/sale"]
                     | %SALE!
             .brace
               .left
@@ -1036,7 +1035,7 @@ html
                   | (097) 
                 | 254-83-34
             .line.callback
-              a[href="http://chaky.patisson-toys.com.ua/feedback" rel="nofollow" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Нажатие на кнопку&#39;, &#39;Перезвоните мне&#39;, document.location.pathname]);"]
+              a[href="/feedback" rel="nofollow" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Нажатие на кнопку&#39;, &#39;Перезвоните мне&#39;, document.location.pathname]);"]
                 | Перезвоните мне
           .col.work
             .title
@@ -1058,7 +1057,7 @@ html
           .content
             div[style="width:90px;margin-right:15px;float:left;display:none;"]
               br
-              a[style="vertical-align:top" href="http://chaky.patisson-toys.com.ua/webmoney" target="_blank"]
+              a[style="vertical-align:top" href="/webmoney" target="_blank"]
                 img[src="./pmain._files/88x31_wm_blue_on_white_ru.png" alt="Оплата через WebMoney" border="0"]
               br
               br
@@ -1081,10 +1080,10 @@ html
         br
         input#lform_password[type="password" placeholder="пароль"]
         div[style="float:left;"]
-          a[href="http://chaky.patisson-toys.com.ua/login?do=restore"]
+          a[href="/login?do=restore"]
             | Забыли пароль
         div[style="float:right;"]
-          a[href="http://chaky.patisson-toys.com.ua/registration"]
+          a[href="/registration"]
             | Зарегистрироваться
         .clear-both
         input#login_btn[type="button" value="Войти"]
@@ -1096,10 +1095,10 @@ html
     #lightbox.lightbox[style="display: none;"]
       .lb-outerContainer
         .lb-container
-          img.lb-image[src="http://chaky.patisson-toys.com.ua/"]
+          img.lb-image[src="/"]
           .lb-nav
-            a.lb-prev[href="http://chaky.patisson-toys.com.ua/"]
-            a.lb-next[href="http://chaky.patisson-toys.com.ua/"]
+            a.lb-prev[href="/"]
+            a.lb-next[href="/"]
           .lb-loader
             a.lb-cancel
       .lb-dataContainer
