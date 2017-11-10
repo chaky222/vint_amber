@@ -1,5 +1,5 @@
 -- +micrate Up
-CREATE TABLE posts (
+CREATE TABLE IF NOT EXISTS posts (
   id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255),
   body TEXT,

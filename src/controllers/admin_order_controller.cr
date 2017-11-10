@@ -1,6 +1,6 @@
-class OrderController < AdminController
+class Admin::OrderController < AdminController
   def index
-    orders = Order.all
+    orders = Order.all("WHERE id IN (81749,81750, 81751)")
     render("index.slang")
   end
 

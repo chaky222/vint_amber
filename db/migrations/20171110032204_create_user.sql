@@ -1,14 +1,13 @@
 -- +micrate Up
-CREATE TABLE users (
-  id BIGSERIAL PRIMARY KEY,
-  name VARCHAR,
-  prof_list VARCHAR,
-  slack_team_id INT,
-  slack_name VARCHAR,
-  created_at TIMESTAMP,
-  updated_at TIMESTAMP
+CREATE TABLE IF NOT EXISTS users (
+  id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(30),
+  prof_list VARCHAR(255),
+  slack_team_id TinyInt,
+  slack_name VARCHAR(30),
+  created_at TIMESTAMP NULL,
+  updated_at TIMESTAMP NULL
 );
-
 
 -- +micrate Down
 DROP TABLE IF EXISTS users;
