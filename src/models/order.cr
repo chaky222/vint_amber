@@ -1,7 +1,7 @@
-require "granite_orm/adapter/pg"
+require "granite_orm/adapter/mysql"
 
 class Order < Granite::ORM::Base
-  adapter pg
+  adapter mysql
   table_name orders
 
 

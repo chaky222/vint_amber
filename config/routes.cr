@@ -27,6 +27,7 @@ Amber::Server.configure do |app|
     get "/", HomeController, :index
     get "/cgi-bin/admins/posts2", PostController, :index
     resources "/cgi-bin/admins/posts", PostController
+    resources "/cgi-bin/admins/orders", OrderController
     #   resources "/posts", PostController
     # end
   end

@@ -1,4 +1,4 @@
-class OrderController < ApplicationController
+class OrderController < AdminController
   def index
     orders = Order.all
     render("index.slang")
