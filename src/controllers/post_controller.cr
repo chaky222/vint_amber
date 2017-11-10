@@ -1,5 +1,12 @@
+require "base64"
+
 class PostController < ApplicationController
   def index
+    puts "\n\n context=[#{context.request.headers.inspect}] \n\n"
+    str1 = context.request.headers["Authorization"]
+    puts "\n\n str1=[#{str1}] \n\n"
+    enc = Base64.decode_string(str1.lchop("Basic "))
+    puts "\n\n enc=[#{enc}] \n\n"
     posts = Post.all
     render("index.slang")
   end

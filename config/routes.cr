@@ -23,7 +23,11 @@ Amber::Server.configure do |app|
   end
 
   routes :web do
-    resources "/posts", PostController
+    # resources "/posts", PostController
     get "/", HomeController, :index
+    get "/cgi-bin/admins/posts2", PostController, :index
+    resources "/cgi-bin/admins/posts", PostController
+    #   resources "/posts", PostController
+    # end
   end
 end

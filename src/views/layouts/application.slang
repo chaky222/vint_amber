@@ -58,8 +58,7 @@ html
         input#top_menu_switcher[type="checkbox" style="display:none;"]
         .top-menu.guest
           .item
-            a[href="/about"]
-              | Кто мы
+            a[href="/about"] Кто мы
           .item
             a[href="/articles"]
               | Игрушечные Новости
