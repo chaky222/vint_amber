@@ -16,5 +16,5 @@ div.col-xs-12.well.filters_block
           == "{status_list}"
       input type="submit" title="Применить фильтры"
 div.col-xs-12.main_text_div
-  == "{main_text}"
+  == "#{main_text}"
 script type="text/javascript" src="/js/admin/o_lite.js"

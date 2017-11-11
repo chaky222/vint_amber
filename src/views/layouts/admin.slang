@@ -27,7 +27,7 @@ html
       == File.read("#{Amber::Settings.site_htdocs}/cgi-bin/admin/files/admin_menu/#{context.data[:user_id].to_s}.html", "CP1251", :skip)
     div.col-xs-12
       div id="search_time_block" == "Рождено за <b id='search_val'> #{Amber::Pipe::Logger.elapsed_text(Time.now - context.time_start)}"
-    div.container
+    div.col-xs-12
       div.row
       - flash.each do |key, value|
         div class="alert alert-#{ key }"
@@ -40,7 +40,5 @@ html
     /script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     
     script src="/dist/main.bundle.js"
-    div.col-xs-12.well.stats style="text-align:center;"
-      = "Made by "
-      a href="https://github.com/chaky222" chaky
-      = "Complate in #{Amber::Pipe::Logger.elapsed_text(Time.now - context.time_start)} + 0.05ms - 0.1ms"
+    br
+    br

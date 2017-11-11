@@ -4,11 +4,12 @@ module Utils
     property ending : Time
 
     def self.by_date_range_str(date_range_str : Nil | String , params = NamedTuple(default: Symbol))
-      defaults = [nil, nil]
+      defaults = [nil, nil] of Time | Nil
       if params[:default]
-        defaults = [Time.now.at_beginning_of_month, Time.now.at_end_of_month] if params[:default]? == :cur_month
-        defaults = [Time.now.date, Time.now.date] if params[:default]? == :today
-        # defaults = [Date.today, Date.today] if params[:default] == :today
+        defaults = [Time.now.at_beginning_of_month, Time.now.at_end_of_month] if params[:default] == :cur_month
+        defaults = [Time.now.date, Time.now.date] if params[:default] == :today
+        defaults = [Time.now.date - 5.day, Time.now.date + 5.day] if params[:default] == :plus_minus_5
+        # defaults = [Date.today, Date.today] if params[:default] == :plus_minus_5
       end
       period = {} of Symbol => Time
       puts "\n\n date_range_str=[#{date_range_str}] \n\n"
@@ -19,9 +20,10 @@ module Utils
         period[:ending] = Time.parse(date_strs_arr[1].strip, "%F") rescue defaults[1]
         # puts "\n\n\n start=[#{start.to_s}] \n\n"
       else
-        return nil
+        period[:start]  ||= defaults[0] || raise "Error start date."
+        period[:ending] ||= defaults[1] || raise "Error ending date."
       end
-      raise "Error in by_date_range_str. Set defaults pls." unless period[:start]? && period[:ending]?
+      raise "Error in by_date_range_str. Set defaults pls or normal date range." unless period[:start]? && period[:ending]?
       period[:start] = period[:ending] if period[:start] > period[:ending]
       new(period)
     end
@@ -50,9 +52,9 @@ module Utils
     #   false
     # end
 
-    # def days_count
-    #   start && ending && ending >= start ? ending.mjd - start.mjd + 1 : nil
-    # end
+    def days
+      (@ending - @start).days
+    end
 
     # def days_with_word
     #   days_count ? days_count.to_s + ' ' + days_diff_words(days_count) : ''
