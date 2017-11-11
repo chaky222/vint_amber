@@ -11,4 +11,8 @@ class User < Granite::ORM::Base
   field slack_team_id : String
   field slack_name : String
   timestamps
+
+  def self.managers
+    User.all("WHERE (NOT(prof_list like '%,3,%'))")
+  end
 end

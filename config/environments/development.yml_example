@@ -17,3 +17,4 @@ session:
 secrets:
   description: Store your development secrets credentials and settings here.
   database: mysql://root@localhost:3306/vint_amber_development
+site_htdocs: "#{Dir.current}/../vint.com.ua"
