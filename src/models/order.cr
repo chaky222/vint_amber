@@ -26,6 +26,11 @@ class Order < Granite::ORM::Base
   field status : Int8
   field manager_id : Int16
   field coordnator_id : Int16
+  field reklama_id : Int16
+  field delivery_accept : Int8
+  field important : Int8
+  field call_waiting : Int8
+  field delivery_submit : Time
   
   field add_time : Time
   # field status : Slice(UInt8)
@@ -34,6 +39,8 @@ class Order < Granite::ORM::Base
 
   @cached_prods = [] of OrderProduct
   @cached_prods_ready : Bool = false
+
+  # getter itogo_
 
   def prods
     return @cached_prods if @cached_prods_ready

@@ -14,6 +14,9 @@ class ApplicationController < Amber::Controller::Base
   def to_json_main_text(main_text : String = "", title : String = "")
     Dummy_main_text_to_json.new(main_text, title, Time.now - context.time_start).to_json()
   end
+  def arr_i8(x : Array(T)) forall T
+    x.map { |v| v.to_i8 }
+  end
   private struct Dummy_main_text_to_json
     JSON.mapping({ result: Int32, main_text: String, search_time: String, title: String })
     def initialize(@main_text, @title, time_spent)

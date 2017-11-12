@@ -45,11 +45,32 @@ class Admin::OrderController < AdminController
       monthes.each do |month, days|
         m_opened = check_id_opened(month, open_list)
         month_childs = ""
-        days.each do |day_label, day_orders|
+        days.keys.sort.reverse_each do |day_label|
+          day_orders = days[day_label]
           day_opened = check_id_opened(day_label, open_list)
           day_childs = ""
-          day_orders.each do |orders_id, order|
-            data = { order_id: orders_id.to_s, number: order.number.to_s, name: order.name, status: order.status, status_name: "sdads" }
+          day_orders.values.sort do |a, b| (
+            (((a.important || 0) <=> (b.important || 0)) * 1024) +
+            (((a.call_waiting || 0) <=> (b.call_waiting || 0)) * 256) +
+            ((Order::ORDER_STATUSES[a.status][:p] <=> Order::ORDER_STATUSES[b.status][:p]) * 64) +
+            (((a.manager_id || 0) <=> (b.manager_id || 0)) * 8) + ((a.id || 0) <=> (b.id || 0)) ).to_i32
+          end.each do |order|
+             delivery_accept : String = ""
+            if arr_i8([1, 12]).includes?(order.status)
+              if (order.delivery_accept || 0) > 0
+                delivery_accept = "<b style=\"color:blue;\">принят</b>"
+              else
+                delivery_accept = "<span style=\"color:red;\">рассматривается</span>"
+                unless order.delivery_submit.nil?
+                  minuts : Int64 = ((Time.now - (order.delivery_submit || Time.now)).total_seconds / 60).trunc.to_i64
+                  delivery_accept = "<b style=\"color:red;\">рассматривается</b>" if (minuts > 30)
+                  delivery_accept = "<blink>#{delivery_accept}</blink>" if (minuts > 60)
+                end
+              end
+            end
+            delivery_accept += "<br>\n i=[#{order.important}] c=[#{order.call_waiting}] st=[#{order.status}] <br>\n"
+
+            data = { delivery_accept: delivery_accept }
             day_childs += render(partial: "order_list_row.slang")
             # return "ok"
           end
