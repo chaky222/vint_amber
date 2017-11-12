@@ -5,6 +5,7 @@ class Admin::OrderController < AdminController
     puts "\n\n index \n\n\n"
     managers = User.managers
     manager_list = params["managers"]? ? params["managers"].split(",") : ['0', context.data[:user_id].to_s]
+    status_list = params["statuses"]? ? params["statuses"].split(",") : ["any"]
     # puts "\n\n current=[#{Amber.database.inspect}] \n\n"
     period = Utils::Period.by_date_range_str(params["date_range"]?, { default: :plus_minus_5 })
     if !period
@@ -18,7 +19,7 @@ class Admin::OrderController < AdminController
     where = "WHERE (id IS NOT NULL) AND (add_time #{period.to_sql})"
     where += " AND (manager_id IN (#{ manager_list.map { |x| x.to_i.to_s }.join(",") }))" unless manager_list.includes?("any")
     puts "\n\n where=[#{where}] \n\n"
-    orders = Order.all(where)
+    orders = Order.all(where, { include_childs: [:order_products, :asdas] } )
     main_text = "<span style='font-weight: normal;'>За период ( #{ period.to_s } ) (#{ period.days } дней) найдено #{ orders.size } заказов</span>"
 
     # years = {} of String => Hash(String, Order)
@@ -48,6 +49,7 @@ class Admin::OrderController < AdminController
           day_orders.each do |orders_id, order|
             data = { order_id: orders_id.to_s, number: order.number.to_s, name: order.name, status: order.status, status_name: "sdads" }
             day_childs += render(partial: "order_list_row.slang")
+            # return "ok"
           end
       #     data = { order_list_rows: day_childs }
           # day_content = render(partial: "order_list.slang")

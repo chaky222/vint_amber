@@ -1,0 +1,12 @@
+name: selenium
+version: 0.2.0
+description: Selenium Webdriver client
+
+authors:
+  - Julien Portalier <julien@portalier.com>
+
+development_dependencies:
+  minitest:
+    github: ysbaddaden/minitest.cr
+
+license: Apache-2.0

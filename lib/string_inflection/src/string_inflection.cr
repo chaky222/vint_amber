@@ -1,0 +1,7 @@
+require "./common"
+require "./camel"
+require "./kebab"
+require "./pascal"
+require "./plural"
+require "./singular"
+require "./snake"

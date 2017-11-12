@@ -13,7 +13,7 @@ div.col-xs-12.well.filters_block
           == self.class.options_for_select([["Любой", "any"], ["Нихто", "0"]] + managers.map { |x| [x.name, x.id.to_s] }, manager_list)
       div.select2_statuses_chooser
         select class="form-control select2-multiple" name="statuses" multiple="multiple" data-placeholder="Managers" title="Статусы" onchange="$(this).closest('form').submit();"
-          == "{status_list}"
+          == self.class.options_for_select([["Любой", "any"]] + Order::ORDER_STATUSES.map { |k, v| [v[:n], k.to_s] }, status_list)
       input type="submit" title="Применить фильтры"
 div.col-xs-12.main_text_div
   == "#{main_text}"

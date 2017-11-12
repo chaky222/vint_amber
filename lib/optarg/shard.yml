@@ -1,0 +1,12 @@
+name: optarg
+version: 0.4.4
+
+authors:
+  - mosop
+
+license: MIT
+
+dependencies:
+  callback:
+    github: mosop/callback
+    version: 0.5.1
