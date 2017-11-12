@@ -26,6 +26,8 @@ class Order < Granite::ORM::Base
   field status : Int8
   field manager_id : Int16
   field coordnator_id : Int16
+  field purchase_id : Int16
+  
   field reklama_id : Int16
   field delivery_accept : Int8
   field important : Int8

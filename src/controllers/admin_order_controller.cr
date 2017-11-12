@@ -39,10 +39,12 @@ class Admin::OrderController < AdminController
     end
     time_now = Time.now.to_s("%Y-%m-%d")
     years_items = ""
-    years.each do |year, monthes|
+    years.keys.sort.reverse_each do |year|
+      monthes = years[year]
       y_opened = check_id_opened(year, open_list)
       year_childs = ""
-      monthes.each do |month, days|
+      monthes.keys.sort.reverse_each do |month|
+        days = monthes[month]
         m_opened = check_id_opened(month, open_list)
         month_childs = ""
         days.keys.sort.reverse_each do |day_label|
@@ -50,10 +52,12 @@ class Admin::OrderController < AdminController
           day_opened = check_id_opened(day_label, open_list)
           day_childs = ""
           day_orders.values.sort do |a, b| (
-            (((a.important || 0) <=> (b.important || 0)) * 1024) +
-            (((a.call_waiting || 0) <=> (b.call_waiting || 0)) * 256) +
+            # (((b.manager_id || 0) == 0 ? 1 : 0) <=> ((a.manager_id || 0) == 0 ? 1 : 0)) * 131072 +
+            (((b.important || 0) <=> (a.important || 0)) * 32768) +
+            (((b.call_waiting || 0) <=> (a.call_waiting || 0)) * 8192) +
             ((Order::ORDER_STATUSES[a.status][:p] <=> Order::ORDER_STATUSES[b.status][:p]) * 64) +
-            (((a.manager_id || 0) <=> (b.manager_id || 0)) * 8) + ((a.id || 0) <=> (b.id || 0)) ).to_i32
+            ((User.get_name(a.manager_id).compare(User.get_name(b.manager_id))) * 8) +
+            ((a.id || 0) <=> (b.id || 0)) ).to_i32
           end.each do |order|
              delivery_accept : String = ""
             if arr_i8([1, 12]).includes?(order.status)
@@ -68,9 +72,9 @@ class Admin::OrderController < AdminController
                 end
               end
             end
-            delivery_accept += "<br>\n i=[#{order.important}] c=[#{order.call_waiting}] st=[#{order.status}] <br>\n"
-
-            data = { delivery_accept: delivery_accept }
+            # delivery_accept += "<br>\n i=[#{order.important}] c=[#{order.call_waiting}] st=[#{order.status}] <br>\n"
+            manager_name = ((order.manager_id || 0) > 0) ? User.get_name(order.manager_id) : "<a href=\"#\" onclick=\"ajax_change_manager_lite(#{ order.id });\"><b>Забрать</b></a>"
+            data = { delivery_accept: delivery_accept, manager_name: manager_name }
             day_childs += render(partial: "order_list_row.slang")
             # return "ok"
           end

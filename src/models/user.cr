@@ -35,7 +35,7 @@ class User < Granite::ORM::Base
     return "" if id.nil? || (!(id > 0))
     id = id.to_i64 unless id.is_a?(Int64)
     u = get(id)
-    u ? u.name : "User[#{id}] not found!"
+    u ? u.name || "Error name" : "User[#{id}] not found!"
   end
 
   def self.all(clause : String = "")
