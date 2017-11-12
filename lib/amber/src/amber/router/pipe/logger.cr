@@ -18,7 +18,9 @@ module Amber
         # @time_start = time
         call_next(context)
         status = context.response.status_code
-        elapsed = self.class.elapsed_text(Time.now - time)
+        elapsed_time = Time.now - time
+        puts "\n elapsed_time=[#{ elapsed_time.total_seconds.to_s }] \n"
+        elapsed = self.class.elapsed_text(elapsed_time)
         @io.puts "#{http_status(status)} | #{method(context)} #{path(context)} | #{elapsed}"
         @io.puts "Params: #{colorize(context.params.to_s, :yellow)}"
         context

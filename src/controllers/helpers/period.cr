@@ -12,9 +12,9 @@ module Utils
         # defaults = [Date.today, Date.today] if params[:default] == :plus_minus_5
       end
       period = {} of Symbol => Time
-      puts "\n\n date_range_str=[#{date_range_str}] \n\n"
+      # puts "\n\n date_range_str=[#{date_range_str}] \n\n"
       date_strs_arr = date_range_str && date_range_str.size > 5 ? date_range_str.split(" - ") : [] of String
-      puts "\n\n date_strs_arr=[#{date_strs_arr.inspect}] \n\n"
+      # puts "\n\n date_strs_arr=[#{date_strs_arr.inspect}] \n\n"
       if date_strs_arr.size > 1
         period[:start]  = Time.parse(date_strs_arr[0].strip, "%F") rescue defaults[0]        
         period[:ending] = Time.parse(date_strs_arr[1].strip, "%F") rescue defaults[1]

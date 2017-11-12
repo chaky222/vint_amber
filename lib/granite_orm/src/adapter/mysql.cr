@@ -19,6 +19,7 @@ class Granite::Adapter::Mysql < Granite::Adapter::Base
       stmt << fields.map { |name| "#{table_name}.#{name}" }.join(",")
       stmt << " FROM #{table_name} #{clause}"
     end
+    puts "\n sql2=[#{statement}]\n"
     open do |db|
       db.query statement, params do |rs|
         yield rs

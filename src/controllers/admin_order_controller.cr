@@ -1,8 +1,6 @@
-
-
 class Admin::OrderController < AdminController
   def index
-    puts "\n\n index \n\n\n"
+    # puts "\n\n index \n\n\n"
     managers = User.managers
     manager_list = params["managers"]? ? params["managers"].split(",") : ['0', context.data[:user_id].to_s]
     status_list = params["statuses"]? ? params["statuses"].split(",") : ["any"]
@@ -13,13 +11,17 @@ class Admin::OrderController < AdminController
       main_text = "Неверно указана дата [#{params["date_range"]?}]."
       return params["form_by_ajax"]? ? to_json_main_text(main_text, "Заказы") : render("index.slang")
     end
-    puts "\n\n period=[#{period.inspect}] \n\n"
+    # puts "\n\n period=[#{period.inspect}] \n\n"
 
     open_list = params["open"]? ? params["open"].split(",") : [Time.now.to_s("%Y-%m-%d")]
     where = "WHERE (id IS NOT NULL) AND (add_time #{period.to_sql})"
     where += " AND (manager_id IN (#{ manager_list.map { |x| x.to_i.to_s }.join(",") }))" unless manager_list.includes?("any")
-    puts "\n\n where=[#{where}] \n\n"
-    orders = Order.all(where, { include_childs: [:order_products, :asdas] } )
+    where += " AND (status IN (#{ status_list.map { |x| x.to_i.to_s }.join(",") }))" unless status_list.includes?("any")
+    # where += " LIMIT 5"
+    # puts "\n\n where=[#{where}] \n\n"
+    # orders = Order.all(where)
+    # orders_prods = OrderProduct.all("WHERE order_id IN (SELECT id FROM orders "+ where + ")")
+    orders = Order.with_prods(where)
     main_text = "<span style='font-weight: normal;'>За период ( #{ period.to_s } ) (#{ period.days } дней) найдено #{ orders.size } заказов</span>"
 
     # years = {} of String => Hash(String, Order)
@@ -85,7 +87,7 @@ class Admin::OrderController < AdminController
   end
   
   def check_id_opened(id : String, list : Array = [] of String)
-    (!(list.bsearch { |x| x.starts_with?(id) }.nil?))
+    (!(list.find { |x| x.starts_with?(id) }.nil?))
   end
 
   def show

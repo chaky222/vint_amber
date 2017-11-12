@@ -129,6 +129,10 @@ module Granite::ORM::Fields
               @{{_name.id}} = value.to_i32
             {% elsif type.id == Int64.id %}
               @{{_name.id}} = value.to_i64
+            {% elsif type.id == Int8.id %}
+              @{{_name.id}} = value.to_i8
+            {% elsif type.id == Int16.id %}
+              @{{_name.id}} = value.to_i16
             {% elsif type.id == Float32.id %}
               @{{_name.id}} = value.to_f32{0.0}
             {% elsif type.id == Float64.id %}
@@ -166,6 +170,10 @@ module Granite::ORM::Fields
               @{{_name.id}} = value.as(Int64).to_i32
             {% elsif type.id == Int64.id %}
               @{{_name.id}} = value.as(Int64)
+            {% elsif type.id == Int8.id %}
+              @{{_name.id}} =  value.as(Int64).to_i8
+            {% elsif type.id == Int16.id %}
+              @{{_name.id}} =  value.as(Int64).to_i16
             {% elsif type.id == Float32.id %}
               @{{_name.id}} = value.as(Float64).to_f32
             {% elsif type.id == Float64.id %}
