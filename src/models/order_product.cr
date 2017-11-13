@@ -16,7 +16,13 @@ class OrderProduct < Granite::ORM::Base
   id : Int64 # primary key is created for you
   field name : String
   field order_id : Int64
-  # field status_id : Int32
+  field sklad_from_id : Int16
+  field qty : Int32
+  field payed : Float32
+  field price_zakup : String
+  
+  
+  field status_id : Int8
   # field qty : Float32
   # field status : Slice(UInt8)
   # field name : String

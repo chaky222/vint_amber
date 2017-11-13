@@ -37,7 +37,8 @@ class Admin::OrderController < AdminController
       years[year][month][day] ||= {} of Int64 => Order
       years[year][month][day][o_id] = order
     end
-    time_now = Time.now.to_s("%Y-%m-%d")
+    time = Time.now
+    time_now = time.to_s("%Y-%m-%d")
     years_items = ""
     years.keys.sort.reverse_each do |year|
       monthes = years[year]
@@ -57,10 +58,10 @@ class Admin::OrderController < AdminController
             (((b.call_waiting || 0) <=> (a.call_waiting || 0)) * 8192) +
             ((Order::ORDER_STATUSES[a.status][:p] <=> Order::ORDER_STATUSES[b.status][:p]) * 64) +
             ((User.get_name(a.manager_id).compare(User.get_name(b.manager_id))) * 8) +
-            ((a.id || 0) <=> (b.id || 0)) ).to_i32
+            ((b.id || 0) <=> (a.id || 0)) ).to_i32
           end.each do |order|
-             delivery_accept : String = ""
-            if arr_i8([1, 12]).includes?(order.status)
+            delivery_accept : String = ""
+            if Utils.arr_i8([1, 12]).includes?(order.status)
               if (order.delivery_accept || 0) > 0
                 delivery_accept = "<b style=\"color:blue;\">принят</b>"
               else
@@ -73,8 +74,27 @@ class Admin::OrderController < AdminController
               end
             end
             # delivery_accept += "<br>\n i=[#{order.important}] c=[#{order.call_waiting}] st=[#{order.status}] <br>\n"
-            manager_name = ((order.manager_id || 0) > 0) ? User.get_name(order.manager_id) : "<a href=\"#\" onclick=\"ajax_change_manager_lite(#{ order.id });\"><b>Забрать</b></a>"
-            data = { delivery_accept: delivery_accept, manager_name: manager_name }
+            order_prio : Bool = Utils.arr_i8([1, 12, 2, 4, 3]).includes?(order.status)
+            sklads = order.get_sklads_sum.keys.size.to_s + ". " + order.get_sklads_sum.map do |k, v|
+              sklad_name = order_prio ? "<a href='#' onclick=\"wopen('/cgi-bin/admin/a_vendors.cgi?do=edit_vendor&id=#{k}')\">#{Vendor.get_name(k)}</a>" : Vendor.get_name(k)
+              sklad_name + '-' + v.to_s
+            end.join(' ')
+            # star_in_hour = false
+            star_in_hour : Bool = (time + 1.hours) > ((order.add_time || time).date + (order.time_to || 0).to_i32.hours)
+            star : String = "<img style='margin-right: -7px; height:16px;' time='#{((order.add_time || time).date + (order.time_to || 0).to_i32.hours).to_s}' time_to='#{(order.time_to || 0).to_i32.hours.to_s}' src='/img/#{ star_in_hour ? "star_sm.gif" : "star_red.png" }'/>&nbsp;&nbsp;"
+            star += "<img style='margin-right: -7px; height:16px;' src='/img/call_waiting_color.png'/>&nbsp;&nbsp;" if (order.call_waiting || 0) > 0;
+            # star += "<img style='margin-right: -7px; height:16px;' src='/img/recall_need.png'/>&nbsp;&nbsp;" if (order.last_orders_quality_mark || 0) > 0;
+            # sklads = sklads_arr.join(' ')
+            new_order : Bool = (order.manager_id || 0) > 0 ? false : true
+            manager_name = ((order.manager_id || 0) > 0) ? User.get_name(order.manager_id) : "<a href='#' onclick='ajax_change_manager_lite(#{ order.id });'><b>Забрать</b></a>"
+            order_name = new_order ? "Новый заказ (#{ (order.add_time || time).to_s("%H:%M") })" : "<a href='/cgi-bin/admin/a_orders_new.cgi?do=show_order&order_id=#{order.id.to_s}'>#{ order.name }</a>"
+            data = { delivery_accept: delivery_accept,
+                     manager_name: manager_name,
+                     prod_cnt: new_order ? "" : order.prods.size.to_s,
+                     sklads: new_order || order.get_sklads_sum.keys.size == 0 ? "" : sklads,
+                     star: (order.important || 0) > 0 ? star : "",
+                     order_name: order_prio ? "<b>#{ order_name }</b>" : order_name,
+                     k_status_color: (order.k_status || 0) == 4 && (order.status || 0) == 100 ? "orange" : "" }
             day_childs += render(partial: "order_list_row.slang")
             # return "ok"
           end

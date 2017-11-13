@@ -1,5 +1,6 @@
 require "jasper_helpers"
 require "json"
+require "../helpers/utils"
 
 class ApplicationController < Amber::Controller::Base
   include JasperHelpers
@@ -8,10 +9,6 @@ class ApplicationController < Amber::Controller::Base
   def self.options_for_select(arr : Array, sel : Array = [] of String)
     # puts "\n\n options_for_select arr=[#{arr.inspect}]\n\n"
     arr.map { |x| "<option value='#{ x[1] }' #{ sel.includes?(x[1].to_s) ? "selected='selected'" : "" } #{ x[2]? ? "title='#{ x[2] }'" : "" }>#{ x[0] }</option>" }.join("")
-  end
-
-  def arr_i8(x : Array(T)) forall T
-    x.map { |v| v.to_i8 }
   end
 
   def to_json_main_text(main_text : String = "", title : String = "")

@@ -24,6 +24,8 @@ class Order < Granite::ORM::Base
   field name : String
   field number : Int32
   field status : Int8
+  field k_status : Int8
+  
   field manager_id : Int16
   field coordnator_id : Int16
   field purchase_id : Int16
@@ -32,6 +34,9 @@ class Order < Granite::ORM::Base
   field delivery_accept : Int8
   field important : Int8
   field call_waiting : Int8
+  field time_to : Int8
+  field call_waiting : Int8
+  
   field delivery_submit : Time
   
   field add_time : Time
@@ -60,6 +65,25 @@ class Order < Granite::ORM::Base
 
   def set_prods_cache_ready
     @cached_prods_ready = true
+  end
+
+  def get_sklads_sum
+    result : Hash(Int64, Int64) = {} of Int64 => Int64
+    prods.each do |p|
+      sklad : Int64 = (p.sklad_from_id || 0).to_i64
+      price : Float32 = (p.price_zakup || "0").to_f32? || 0.to_f32
+      next unless sklad > 0 && (p.qty || 0) > 0 && price> 0 || Utils.arr_i8([5, 6]).includes?(p.status_id)
+      result[sklad] = 0.to_i64 if result[sklad]?.nil?
+      result[sklad] += ((p.qty || 0) * price).trunc.to_i64
+    end
+    result
+  end
+
+  def start_in_hour
+    if (Time.now + 1.hour) > ((add_time || Time.now).date + time_to.hour)
+
+    end
+    # (DATE_ADD(NOW(), INTERVAL 1 HOUR)>DATE_ADD(DATE(o.add_time),INTERVAL o.time_to HOUR)) as in_hour
   end
 
   def self.with_prods(clause : String)
